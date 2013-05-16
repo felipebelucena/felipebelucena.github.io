@@ -43,7 +43,6 @@ Aluno: Luís Felipe Lucena</p>
 <li><a href="#referencias">Referências</a></li>
 </ol><hr>
 
-<pre><code>$codigo tar -xvzf chupa</code></pre>
 
 <h3 id="historico">Histórico</h3>
 
@@ -106,7 +105,7 @@ Esses alertas podem ser enviados atráves de SMS/Email.
   
   <ul>
     <li>Integração entre aplicações locais e de terceiros através de diversas APIs;</li>
-    <li>Centenas de <em>addons</em> desenvolvidos pela comunidade que extendem o funcionamento do Nagios Core</li>
+    <li>Centenas de <em>plugins></em> e <em>addons</em> desenvolvidos pela comunidade que extendem o funcionamento do Nagios Core</li>
     
   </ul>
   
@@ -133,6 +132,75 @@ Esses alertas podem ser enviados atráves de SMS/Email.
 
 <hr><h3 id="install">Instalação</h3>
 
+<p>O Nagios pode ser instalado em sistemas Linux (Ou Unix). O Site oficial fornece tutoriais para
+  instalação nos seguintes sistemas: Fedora, Ubuntu e openSUSE. Este documento irá apresentar a instalação
+  do Nagios no Fedora. Para um tutorial de instalação nos outros sistemas, clique <a target="_bank" href="http://nagios.sourceforge.net/docs/3_0/quickstart-ubuntu.html">aqui</a> para instalar o nagios no
+  ubuntu e <a target="_bank" href="http://nagios.sourceforge.net/docs/3_0/quickstart-opensuse.html">aqui</a> para instalar no openSUSE.
+</p><br>
+
+<strong><p>Instalação no Fedora:</p></strong>
+<p>
+  Para instalar o Nagios no Fedora é preciso ter acesso root e instalar os seguintes pacotes: apache, php gcc e a biblioteca gb.
+  Para Fazer isso, execute os comandos:
+</p>
+
+<pre><code># yum install -y httpd php gcc glibc glibc-common gd gd-devel</code></pre>
+
+<p>Crie um usuário "nagios" e dê um password a ele:</p>
+
+<pre><code>
+          # useradd -m nagios
+          # passwd nagios        
+      </code>  
+</pre>
+
+<p>Criar o grupo nagcmd (permite que comandos externos sejam enviados pela interface web. Adicionar os usuários nagios e apache ao grupo:</p>
+
+<pre>
+  <code>
+      # grupoadd -m nagcmd
+      # usermod -a -G nagcmd nagios
+      # usermod -a -G nagcmd apache
+      </code>
+</pre>
+
+
+<p>Baixe os arquivos do Nagios Core e Nagios Plugin</p>
+
+<pre>
+  <code>
+      # wget http://prdownloads.sourceforge.net/sourceforge/nagios/nagios-3.2.3.tar.gz
+      # wget http://prdownloads.sourceforge.net/sourceforge/nagiosplug/nagios-plugins-1.4.11.tar.gz
+
+  </code>
+</pre>
+
+<p>Compilar e instalar o Nagios Code</p>
+
+<pre>
+  <code>
+    # tar xzf nagios-3.2.3.tar.gz
+    # cd nagios-3.2.3
+    # ./configure --with-command-group=nagcmd
+    # make all
+    # make install
+    # make install-init
+    # make install-config
+    # make install-commandmode
+
+  </code>
+</pre>
+
+<p>Altere o arquivo <em>/usr/local/nagios/etc/objects/contacts.cfg</em> para configurar o email no qual você deseja receber os alertas</p>
+
+<p>Instale o arquivo de configuração da interface web no diretório do apache, crie um usuário para se logar na interface web e reinicie o Apache:</p>
+<pre>
+  <code>
+    # make install-webconf
+    # htpasswd -c /usr/local/nagios/etc/htpasswd.users nagiosadmin
+    # service httpd restart
+  </code>
+</pre>
 <hr><h3 id="demo">Demonstração</h3>
 
 <hr><h3 id="referencias">Referências</h3>
