@@ -148,59 +148,55 @@ Esses alertas podem ser enviados atráves de SMS/Email.
 
 <p>Crie um usuário "nagios" e dê um password a ele:</p>
 
-<pre><code>
-          # useradd -m nagios
-          # passwd nagios        
-      </code>  
-</pre>
+<pre><code># useradd -m nagios
+# passwd nagios</code></pre>
 
 <p>Criar o grupo nagcmd (permite que comandos externos sejam enviados pela interface web. Adicionar os usuários nagios e apache ao grupo:</p>
 
-<pre>
-  <code>
-      # grupoadd -m nagcmd
-      # usermod -a -G nagcmd nagios
-      # usermod -a -G nagcmd apache
-      </code>
-</pre>
+<pre><code># grupoadd -m nagcmd
+# usermod -a -G nagcmd nagios
+# usermod -a -G nagcmd apache</code></pre>
 
 
 <p>Baixe os arquivos do Nagios Core e Nagios Plugin</p>
 
-<pre>
-  <code>
-      # wget http://prdownloads.sourceforge.net/sourceforge/nagios/nagios-3.2.3.tar.gz
-      # wget http://prdownloads.sourceforge.net/sourceforge/nagiosplug/nagios-plugins-1.4.11.tar.gz
-
-  </code>
-</pre>
+<pre><code># wget http://prdownloads.sourceforge.net/sourceforge/nagios/nagios-3.2.3.tar.gz
+# wget http://prdownloads.sourceforge.net/sourceforge/nagiosplug/nagios-plugins-1.4.11.tar.gz</code></pre>
 
 <p>Compilar e instalar o Nagios Code</p>
 
-<pre>
-  <code>
-    # tar xzf nagios-3.2.3.tar.gz
-    # cd nagios-3.2.3
-    # ./configure --with-command-group=nagcmd
-    # make all
-    # make install
-    # make install-init
-    # make install-config
-    # make install-commandmode
-
-  </code>
-</pre>
+<pre><code># tar xzf nagios-3.2.3.tar.gz
+# cd nagios-3.2.3
+# ./configure --with-command-group=nagcmd
+# make all
+# make install
+# make install-init
+# make install-config
+# make install-commandmode</code></pre>
 
 <p>Altere o arquivo <em>/usr/local/nagios/etc/objects/contacts.cfg</em> para configurar o email no qual você deseja receber os alertas</p>
 
 <p>Instale o arquivo de configuração da interface web no diretório do apache, crie um usuário para se logar na interface web e reinicie o Apache:</p>
-<pre>
-  <code>
-    # make install-webconf
-    # htpasswd -c /usr/local/nagios/etc/htpasswd.users nagiosadmin
-    # service httpd restart
-  </code>
-</pre>
+<pre><code># make install-webconf
+# htpasswd -c /usr/local/nagios/etc/htpasswd.users nagiosadmin
+# service httpd restart</code></pre>
+
+<p>Compilar e instalar o Nagios Plugins:</p>
+<pre><code>#tar xzf nagios-plugins-1.4.11.tar.gz
+# cd nagios-plugins-1.4.11
+# ./configure --with-nagios-user=nagios --with-nagios-group=nagios
+# make
+# make install</code></pre>
+
+<p>Fazer com que o Nagios inicie automaticamente no sistema:</p>
+<pre><code># chkconfig -add nagios
+# chckconfig service nagios on
+# service nagios start</code></pre>
+
+<p>Por fim, abra o navegador e se logue na interface web:</p>
+<pre><code>http://localhost/nagios</code></pre>
+
+
 <hr><h3 id="demo">Demonstração</h3>
 
 <hr><h3 id="referencias">Referências</h3>
