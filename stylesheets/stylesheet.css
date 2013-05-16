@@ -114,6 +114,7 @@ a {
   text-decoration: none;
   color: #007edf;
   text-shadow: none;
+  target:"_blank";
 
   transition: color 0.5s ease;
   transition: text-shadow 0.5s ease;
