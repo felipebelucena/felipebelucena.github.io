@@ -200,6 +200,37 @@ Esses alertas podem ser enviados atráves de SMS/Email.
 <hr><h3 id="demo">Demonstração</h3>
 <p>Após login no nagios você verá a seguinte interface:</p>
 <img src="/images/home_page.png" />
+
+<p>No Nagios Core, para monitorar hosts, servidores, ativos de rede, serviços etc. deve-se alterar os arquivos
+  de configurações. O arquivo de configuração principal é o <strong><em>/usr/local/nagios/etc/nagios.cfg</em></strong>.
+  Para começar a monitorar um host, edite o arquivo <strong><em>/usr/local/nagios/etc/objects/localhost.cfg</em></strong>
+e adicione as seguintes linhas:</p>
+
+<p>Definindo o host a ser monitorado:</p>
+<pre><code>define host {
+  use         linux-server  ; Nome do arquivo de host template
+  host_name   localhost
+  alias       localhost
+  address     127.0.0.1
+}</code></pre>
+
+<p>Para configurar o Nagios para monitorar um serviço de um host, como o PING por exemplo, adicione as linhas no arquivo localhost.cfg</p>
+
+<pre><code>define service {
+  use                   local-service         ; Nome do template de serivço a ser usado
+  host_name             localhost
+  service_description   PING
+  check_command         check_ping!100.0,20%!500.0,60%
+}</code></pre>
+
+
+<p>Com isso, seu host adicionado aparecerá na listagem de hosts monitorados pelo nagios conforme a figura abaixo</p>
+
+<img src="/images/hosts_page.png" />
+
+<p>Na aba service, é exibido uma listagem dos serviços monitorados, bem como os seus status:</p>
+<img src="/images/services.png" />
+
 <hr><h3 id="referencias">Referências</h3>
 <p>Este material foi baseado na documentação oficial do Nagios. As informações foram retiradas dos seguintes links:</p>
 <ul>
