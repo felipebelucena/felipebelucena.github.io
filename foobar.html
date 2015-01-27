@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Gerência de Redes - UNICAP : Nagios" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>FOOBAR bar batz</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <h1 id="project_title">testoso</h1>
+          <h2 id="project_tagline">Nagios</h2>
+
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3>Apresentação</h3>
+
+<p>Este documento foi realizado durante a disciplina de Gerência de Redes, na Universidade Católica de Pernambuco, como parte da avaliação do 2º Grau de Qualificação. A ferramenta escolhida para a realização da atividade foi a Nagios. Clique <a href="https://docs.google.com/presentation/d/1CrjKXR-HgKq-th54atwtya263KJckxvFkHhFBjOqDSs/edit?usp=sharing" target="_blank">aqui</a> para ter acesso aos slides da apresentação.</p>
+
+<p>Prof: Antônio Rubens <br>
+Aluno: Luís Felipe Lucena</p>
+
+<hr><h3>Sumário</h3>
+
+<ol>
+<li><a href="#historico">Histórico</a></li>
+<li><a href="#geral">Visão Geral</a></li>
+<li><a href="#func">Funcionalidades</a></li>
+<li><a href="#install">Instalação</a></li>
+<li><a href="#demo">Demonstração</a></li>
+<li><a href="#referencias">Referências</a></li>
+<li><a href="#perguntas">Perguntas</a></li>
+</ol><hr>
+
+
+<h3 id="historico">Histórico</h3>
+
+<p>Nesta Seção será apresentado um breve histórico da ferramenta. O Nagios foi desenvolvido e lançado em 1999, por Ethan Galstad, como um projeto <em>open source</em>, inicialmente utilizando o nome NetSaint.Em 2002, devido para evitar problemas de direitos de marca, mudou o nome para <em>Nagios</em> (Acrônimo recursivo para <strong>N</strong>agios <strong>Aint</strong> <strong>G</strong>onna <strong>I</strong>nsist <strong>O</strong>n <strong>S</strong>ainthood, em tradução livre, Nagios não vai insistir em <em>Santidade</em>, trocadilho com o primeiro nome da ferramenta, <em>NetSaint</em>).
+Em 2009, ganhou o prêmio da Linux Journal Reader's Choice de  "Aplicação Linux de monitoramento favorita". Ainda em 2009, a ferramenta foi baixada mais de 600.000 vezes no <a href="http://sourceforge.net" target="_blank">sourceforge.net</a></p>
+
+
+
+<hr><h3 id="geral">Visão Geral</h3>
+
+<p> O Nagios é ferramenta de gerenciamento de rede que permite que organizações identifiquem e resolvam problemas de infraestrutura de TI, antes que eles afetem criticamente o processo de negócio"
+Monitora a infraestrutura de IT para garantir que sistemas, aplicações e serviços estejam funcionando devidamente. Em caso de falhas, o Nagios envia alertas para que elas sejam resolvidas antes afetem processos, usuários ou clientes.
+Esses alertas podem ser enviados atráves de SMS/Email.
+<br>Utlizando o Nagios é possível:
+<ul>
+  <li>Planejar atualizações antes que sistemas desatualizados causem falhas (Ligado a àrea de gerência de configuração do OSI</li>
+  <li>Consertar problemas automaticamente quando eles são detectados;</li>
+  <li>Garantir que indisponibilidades de infraestrutura (outages) tenham um efeito mínimo na sua organização;</li>
+  <li>Monitorar toda a infraestrutura e processos de negócio.</li>
+
+</ul>
+</p>
+
+<hr><h3 id="func">Funcionalidades e vantagens</h3>
+
+<strong><p>Monitoramento:</p></strong>
+<ul>
+  <li>Monitora aplicações, serviços, sistemas operacionais, protocolos de rede, métricas de sistema e componentes de infraestrutura utilizando uma única ferramenta;</li>
+  <li>Poderosas APIs de script que permitem fácil monitoração.</li>  
+</ul>
+
+<strong><p>Visibilidade</p></strong>
+<ul>
+  <li>Visão centralizada de toda a infraestrutura de TI monitorada;</li>
+  <li>Detalhada informação de status disponível através de interface web.</li>
+</ul>
+
+<strong><p>Consciência</p></strong>
+
+<ul>
+  <li>Rápida detecção de indisponibilidade de infraestrutura;</li>
+
+  <li>Alertas podem ser enviados para os administradores de rede através de email ou SMS;</li>
+
+  <li>Capacidades de escalonamento garantem que as notificações cheguem nas pessoas certas.</li>
+
+</ul>
+
+<strong><p>Remediação de problemas.</p></strong>
+  <ul>
+    <li>"Event handlers": Esta funcionalidade permite a criação de script que são executados quando algum evento ocorre.
+    Exemplo: Imagine que você tenha uma servidor apache e que ele está sendo monitorando através do Nagios. No momento
+    em que esse servidor cair é possível criar um <em>event handler</em> para que, de forma automática, um script levante o serviço
+    do apache novamente.
+</li>
+    
+  </ul>
+  
+  <strong><p>Arquitetura expandível</p></strong>
+  
+  <ul>
+    <li>Integração entre aplicações locais e de terceiros através de diversas APIs;</li>
+    <li>Centenas de <em>plugins></em> e <em>addons</em> desenvolvidos pela comunidade que extendem o funcionamento do Nagios Core</li>
+    
+  </ul>
+  
+  <strong><p>Estável, Confiável e Comunidade ativa.</p></strong>
+  <ul>
+    <li>Mais de 10 anos de desenvolvimento ativo;</li>
+
+    <li>Escalável para monitorar milhares de nós;</li>
+
+    <li>Estimados 1 milhão de usuários pelo mundo;</li>
+
+    <li>Lista de emails da comunidade provem suporte de graça.</li>
+  </ul>
+  
+  <strong><p>Código reutilizável.</p></strong>
+  <ul>
+    <li>Open source software;</li>
+
+    <li>Acesso total ao código fonte;</li>
+
+    <li>Lançado através da licença GPL.</li>
+  </ul>
+
+
+<hr><h3 id="install">Instalação</h3>
+
+<p>O Nagios pode ser instalado em sistemas Linux (Ou Unix). O Site oficial fornece tutoriais para
+  instalação nos seguintes sistemas: Fedora, Ubuntu e openSUSE. Este documento irá apresentar a instalação
+  do Nagios no Fedora. Para um tutorial de instalação nos outros sistemas, clique <a target="_bank" href="http://nagios.sourceforge.net/docs/3_0/quickstart-ubuntu.html">aqui</a> para instalar o nagios no
+  ubuntu e <a target="_bank" href="http://nagios.sourceforge.net/docs/3_0/quickstart-opensuse.html">aqui</a> para instalar no openSUSE.
+</p><br>
+
+<strong><p>Instalação no Fedora:</p></strong>
+<p>
+  Para instalar o Nagios no Fedora é preciso ter acesso root e instalar os seguintes pacotes: apache, php gcc e a biblioteca gb.
+  Para Fazer isso, execute os comandos:
+</p>
+
+<pre><code># yum install -y httpd php gcc glibc glibc-common gd gd-devel</code></pre>
+
+<p>Crie um usuário "nagios" e dê um password a ele:</p>
+
+<pre><code># useradd -m nagios
+# passwd nagios</code></pre>
+
+<p>Criar o grupo nagcmd (permite que comandos externos sejam enviados pela interface web. Adicionar os usuários nagios e apache ao grupo:</p>
+
+<pre><code># grupoadd -m nagcmd
+# usermod -a -G nagcmd nagios
+# usermod -a -G nagcmd apache</code></pre>
+
+
+<p>Baixe os arquivos do Nagios Core e Nagios Plugin</p>
+
+<pre><code># wget http://prdownloads.sourceforge.net/sourceforge/nagios/nagios-3.2.3.tar.gz
+# wget http://prdownloads.sourceforge.net/sourceforge/nagiosplug/nagios-plugins-1.4.11.tar.gz</code></pre>
+
+<p>Compilar e instalar o Nagios Core</p>
+
+<pre><code># tar xzf nagios-3.2.3.tar.gz
+# cd nagios-3.2.3
+# ./configure --with-command-group=nagcmd
+# make all
+# make install
+# make install-init
+# make install-config
+# make install-commandmode</code></pre>
+
+<p>Altere o arquivo <em>/usr/local/nagios/etc/objects/contacts.cfg</em> para configurar o email no qual você deseja receber os alertas</p>
+
+<p>Instale o arquivo de configuração da interface web no diretório do apache, crie um usuário para se logar na interface web e reinicie o Apache:</p>
+<pre><code># make install-webconf
+# htpasswd -c /usr/local/nagios/etc/htpasswd.users nagiosadmin
+# service httpd restart</code></pre>
+
+<p>Compilar e instalar o Nagios Plugins:</p>
+<pre><code>#tar xzf nagios-plugins-1.4.11.tar.gz
+# cd nagios-plugins-1.4.11
+# ./configure --with-nagios-user=nagios --with-nagios-group=nagios
+# make
+# make install</code></pre>
+
+<p>Fazer com que o Nagios inicie automaticamente no sistema:</p>
+<pre><code># chkconfig -add nagios
+# chckconfig service nagios on
+# service nagios start</code></pre>
+
+<p>Por fim, abra o navegador e se logue na interface web:</p>
+<pre><code>http://localhost/nagios</code></pre>
+
+
+<hr><h3 id="demo">Demonstração</h3>
+<p>Após login no nagios você verá a seguinte interface:</p>
+<img src="/images/home_page.png" />
+
+<p>No Nagios Core, para monitorar hosts, servidores, ativos de rede, serviços etc. deve-se alterar os arquivos
+  de configurações. O arquivo de configuração principal é o <strong><em>/usr/local/nagios/etc/nagios.cfg</em></strong>.
+  Para começar a monitorar um host, edite o arquivo <strong><em>/usr/local/nagios/etc/objects/localhost.cfg</em></strong>
+e adicione as seguintes linhas:</p>
+
+<p>Definindo o host a ser monitorado:</p>
+<pre><code>define host {
+  use         linux-server  ; Nome do arquivo de host template
+  host_name   localhost
+  alias       localhost
+  address     127.0.0.1
+}</code></pre>
+
+<p>Para configurar o Nagios para monitorar um serviço de um host, como o PING por exemplo, adicione as linhas no arquivo localhost.cfg</p>
+
+<pre><code>define service {
+  use                   local-service         ; Nome do template de serivço a ser usado
+  host_name             localhost
+  service_description   PING
+  check_command         check_ping!100.0,20%!500.0,60%
+}</code></pre>
+
+
+<p>Com isso, seu host adicionado aparecerá na listagem de hosts monitorados pelo nagios conforme a figura abaixo</p>
+
+<img src="/images/hosts_page.png" />
+
+<p>Na aba service, é exibido uma listagem dos serviços monitorados, bem como os seus status:</p>
+<img src="/images/services.png" />
+
+<hr><h3 id="referencias">Referências</h3>
+<p>Este material foi baseado na documentação oficial do Nagios. As informações foram retiradas dos seguintes links:</p>
+<ul>
+  <li><a href="http://nagios.org" target="_blank">Site oficial do Nagios</a></li>
+  <li><a href="http://nagios.org/documentation" target="_blank">Documentação</a></li>
+  <li><a href="http://nagios.org/about" target="_blank">Overview</a></li>
+  
+</ul>
+
+<hr><h3 id="perguntas">Perguntas</h3>
+
+<ul>
+  <li>É possível instalar o Nagios Core em máquinas windows?</li>
+  <li>De que modo é possível extender as funcionalidades do Nagios?</li>
+  <li>O que são "Event handlers" (manipuladores de eventos)?</li>
+</ul>
+<hr></section>
+     
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
