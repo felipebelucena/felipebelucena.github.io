@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Devblog</title>
-    <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+    <description>Computer Science bachelor at UNICAP. Currently working on C.E.S.A.R (Recife center for studies and advanced systems).
 </description>
     <link>http://felipebelucena.github.io/</link>
     <atom:link href="http://felipebelucena.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 28 Jan 2015 14:03:01 -0300</pubDate>
-    <lastBuildDate>Wed, 28 Jan 2015 14:03:01 -0300</lastBuildDate>
+    <pubDate>Wed, 28 Jan 2015 15:55:00 -0300</pubDate>
+    <lastBuildDate>Wed, 28 Jan 2015 15:55:00 -0300</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>

@@ -4,8 +4,10 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+Hello World! I'm Felipe Lucena, a computer Science Bachelor at UNICAP and currently working at C.E.S.A.R, developing desktop and mobile systems. C.E.S.A.R (Recife center for advanced studies and systems) is an Information, Technology and Communication private institute located in Recife, Pernambuco, Brasil.
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
+The main goal with this blog is to share a little of the experience I've adquired via tutorials and maybe some non-tech posts. As a side effect I expect to develop my english writing =].
 
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+You can find me at twitter: [@felipebelucena](http://www.twitter.com/felipebelucena)
+
+
