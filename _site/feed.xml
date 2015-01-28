@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Devblog</title>
-    <description>Felipe Lucena is a Computer Science bachelor at UNICAP and Currently working at C.E.S.A.R (Recife center for advanced studies and systems).
+    <description>Felipe Lucena is a Computer Science bachelor at UNICAP and Currently working as a JR System Engineer at C.E.S.A.R. Also a bad guitar player in the mean time.
 </description>
     <link>http://felipebelucena.github.io/</link>
     <atom:link href="http://felipebelucena.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 28 Jan 2015 16:09:04 -0300</pubDate>
-    <lastBuildDate>Wed, 28 Jan 2015 16:09:04 -0300</lastBuildDate>
+    <pubDate>Wed, 28 Jan 2015 16:42:48 -0300</pubDate>
+    <lastBuildDate>Wed, 28 Jan 2015 16:42:48 -0300</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
