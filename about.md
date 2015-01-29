@@ -10,6 +10,6 @@ Hello World! I'm Felipe Lucena, a Computer Science Bachelor at UNICAP and curren
 
 The main goal with this blog is to share a little tips and tutorials regarding system engineer in general (and maybe some non-tech posts also). As a side effect I expect to improve my english writing =].
 
-You can find me at twitter: [@felipebelucena](http://www.twitter.com/felipebelucena)
+Check out my social networks below!
 
 
