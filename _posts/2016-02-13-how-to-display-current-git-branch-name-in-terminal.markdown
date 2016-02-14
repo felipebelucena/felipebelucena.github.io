@@ -30,7 +30,7 @@ And this to the bottom of your ```~/.bashrc```.
 export PS1="\${debian_chroot:+(\$debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
 {% endhighlight %}
 
-As ```~/.profile``` is executed at the begining of each session, run this to activate in the current session:
+As ```~/.profile``` is executed at the beginning of each session, run this to activate it in the current session:
 
 {% highlight shell %}
 $ source ~/.profile
