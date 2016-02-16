@@ -14,28 +14,22 @@ Getting back to linux, I looked for this same feature and found [git-aware-promp
 
 Installation is pretty straightforward, you just need to:
 
-1. get the source:
+1. get the source: 
 
-	```shell
-	$ mkdir ~/.bash
-	$ cd ~/.bash        
-	$ git clone git://github.com/jimeh/git-aware-prompt.git
-	```
+        $ mkdir ~/.bash 
+        $ cd ~/.bash     
+        $ git clone git://github.com/jimeh/git-aware-prompt.git
 
 2. add this to the bottom of your ```~/.bashrc```:
 
-	```shell
-	# git-aware-prompt configuration
-	export GITAWAREPROMPT=~/.bash/git-aware-prompt
-	source "${GITAWAREPROMPT}/main.sh"
-	export PS1="\${debian_chroot:+(\$debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
-	```
+        # git-aware-prompt configuration  
+        export GITAWAREPROMPT=~/.bash/git-aware-prompt  
+        source "${GITAWAREPROMPT}/main.sh"  
+        export PS1="\${debian_chroot:+(\$debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
 
 3. run this to activate it in the current session:
 
-	```shell
-	$ source ~/.bashrc
-	```
+        $ source ~/.bashrc
 
 ## Result.
 The picture below shows how your terminal will look like:
@@ -44,3 +38,23 @@ The picture below shows how your terminal will look like:
 
 For more info, check out the project's [README](https://github.com/jimeh/git-aware-prompt).
 
+
+## Fenced code blocks inside ordered and unordered lists
+
+1. This is a numbered list.
+2. I'm going to include a fenced code block as part of this bullet:
+
+    ```
+    Code
+    More Code
+    ```
+
+3. We can put fenced code blocks inside nested bullets, too.
+   1. Like this:
+
+        ```c
+        printf("Hello, World!");
+        ```
+
+   2. The key is to indent your fenced block by **(4 * bullet_indent_level)** spaces.
+   3. Also need to put a separating newline above and below the fenced block.
