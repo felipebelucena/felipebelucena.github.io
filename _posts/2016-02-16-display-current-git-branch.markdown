@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "How to display current git branch name in terminal"
-date:   2016-02-13 22:10:00
+date:   2016-02-16 22:10:00
 categories: git
 ---
 
@@ -38,23 +38,3 @@ The picture below shows how your terminal will look like:
 
 For more info, check out the project's [README](https://github.com/jimeh/git-aware-prompt).
 
-
-## Fenced code blocks inside ordered and unordered lists
-
-1. This is a numbered list.
-2. I'm going to include a fenced code block as part of this bullet:
-
-    ```
-    Code
-    More Code
-    ```
-
-3. We can put fenced code blocks inside nested bullets, too.
-   1. Like this:
-
-        ```c
-        printf("Hello, World!");
-        ```
-
-   2. The key is to indent your fenced block by **(4 * bullet_indent_level)** spaces.
-   3. Also need to put a separating newline above and below the fenced block.
