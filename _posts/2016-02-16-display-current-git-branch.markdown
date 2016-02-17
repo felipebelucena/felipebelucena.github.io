@@ -7,7 +7,7 @@ categories: git
 
 Last year I worked on a project that required me to use Windows. As we use git for version control and Windows command line suck, I searched for a tool and ended up using [git bash](https://git-for-windows.github.io/). One cool thing about git bash is that it shows the current branch name, no need to use 'git status', or 'git branch' all the time.
 
-Getting back to linux, I looked for this same feature and found [git-aware-prompt](https://github.com/jimeh/git-aware-prompt). In the section above I'll show how to install on Ubuntu 15.10.
+Getting back to linux, I looked for this same feature and found [git-aware-prompt](https://github.com/jimeh/git-aware-prompt). In the section below I'll show how to install it.
 
 
 ## Installation.
