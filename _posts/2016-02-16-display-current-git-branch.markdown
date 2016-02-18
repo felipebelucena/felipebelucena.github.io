@@ -14,22 +14,30 @@ Getting back to linux, I looked for this same feature and found [git-aware-promp
 
 Installation is pretty straightforward, you just need to:
 
-1. get the source: 
+* get the source: 
+    
+~~~ bash
+$ mkdir ~/.bash
+$ cd ~/.bash
+$ git clone git://github.com/jimeh/git-aware-prompt.git
+~~~
 
-        $ mkdir ~/.bash 
-        $ cd ~/.bash     
-        $ git clone git://github.com/jimeh/git-aware-prompt.git
 
-2. add this to the bottom of your ```~/.bashrc```:
+* add this to the bottom of your ```~/.bashrc```:
 
-        # git-aware-prompt configuration  
-        export GITAWAREPROMPT=~/.bash/git-aware-prompt  
-        source "${GITAWAREPROMPT}/main.sh"  
-        export PS1="\${debian_chroot:+(\$debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
+~~~ bash
+# git-aware-prompt configuration
+export GITAWAREPROMPT=~/.bash/git-aware-prompt
+source "${GITAWAREPROMPT}/main.sh"
+export PS1="\${debian_chroot:+(\$debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
+~~~
 
-3. run this to activate it in the current session:
+* run this to activate it in the current session:
 
-        $ source ~/.bashrc
+~~~ bash
+$ source ~/.bashrc
+~~~
+
 
 ## Result.
 The picture below shows how your terminal will look like:
